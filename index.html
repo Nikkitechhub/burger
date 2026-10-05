@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Block World</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+</head>
+
+<body>
+
+    <div id="game"></div>
+
+    <!-- Crosshair -->
+    <div id="crosshair">+</div>
+
+    <!-- Start screen -->
+    <div id="startScreen">
+        <div class="panel">
+            <h1>BLOCK WORLD</h1>
+            <p>A Minecraft-style browser game</p>
+
+            <button id="startButton">PLAY</button>
+
+            <div class="controls">
+                <p><b>W A S D</b> - Move</p>
+                <p><b>SPACE</b> - Jump</p>
+                <p><b>LEFT CLICK</b> - Break block</p>
+                <p><b>RIGHT CLICK</b> - Place block</p>
+                <p><b>1 - 5</b> - Select block</p>
+                <p><b>ESC</b> - Release mouse</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HUD -->
+    <div id="hud">
+
+        <div id="topInfo">
+            <span id="fps">FPS: 0</span>
+            <span id="position">X: 0 Y: 0 Z: 0</span>
+        </div>
+
+        <div id="hotbar">
+
+            <div class="slot selected" data-block="grass">
+                <div class="blockIcon grass"></div>
+                <span>1</span>
+            </div>
+
+            <div class="slot" data-block="dirt">
+                <div class="blockIcon dirt"></div>
+                <span>2</span>
+            </div>
+
+            <div class="slot" data-block="stone">
+                <div class="blockIcon stone"></div>
+                <span>3</span>
+            </div>
+
+            <div class="slot" data-block="wood">
+                <div class="blockIcon wood"></div>
+                <span>4</span>
+            </div>
+
+            <div class="slot" data-block="leaves">
+                <div class="blockIcon leaves"></div>
+                <span>5</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
